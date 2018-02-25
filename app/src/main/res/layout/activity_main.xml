@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="#303C48">
 
     <ImageView
         android:id="@+id/bg"
@@ -16,74 +16,73 @@
         android:id="@+id/ud1"
         android:layout_width="250dp"
         android:layout_height="70dp"
-        android:src="@drawable/udacitylogob"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/imagedescription_logo"
         android:onClick="goToUrl"
-        android:contentDescription="@string/imagedescription_logo" />
+        android:src="@drawable/udacitylogob" />
 
     <ImageView
         android:id="@+id/ud2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ideasb"
         android:layout_below="@id/ud1"
+        android:contentDescription="@string/imagedescription_background"
         android:scaleType="centerCrop"
-        android:contentDescription="@string/imagedescription_background" />
-
+        android:src="@drawable/ideasb" />
 
     <TextView
         android:id="@+id/add"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:background="#ffffff"
-        android:textAlignment="viewEnd"
-        android:layout_gravity="end"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:paddingTop="2dp"
-        android:paddingRight="5dp"
-        android:paddingLeft="0dp"
-        android:paddingEnd="5dp"
-        android:paddingStart="0dp"
-        android:text="@string/address"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ud1"
+        android:layout_gravity="end"
         android:autoLink="map"
-        android:textSize="16sp"
+        android:background="#ffffff"
+        android:fontFamily="gothic"
+        android:paddingEnd="5dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="5dp"
+        android:paddingStart="0dp"
+        android:paddingTop="2dp"
+        android:text="@string/address"
+        android:textAlignment="viewEnd"
         android:textColor="@color/black"
         android:textColorLink="@color/black"
-        android:textStyle="bold"
-        android:fontFamily="gothic"
-        android:layout_below="@id/ud1" />
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/web"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:background="@color/udacitygrey"
-        android:text="@string/weblink"
+        android:layout_alignParentBottom="true"
         android:autoLink="web"
-        android:textSize="16sp"
-        android:textColor="@color/udacitygreen"
-        android:textColorLink="@color/udacitygreen"
-        android:textStyle="bold"
+        android:background="@color/udacitygrey"
         android:fontFamily="gothic"
         android:padding="2dp"
-        android:layout_alignParentBottom="true" />
+        android:text="@string/weblink"
+        android:textAlignment="center"
+        android:textColor="@color/udacitygreen"
+        android:textColorLink="@color/udacitygreen"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:background="@color/udacityblue"
+        android:layout_above="@id/web"
         android:autoLink="phone"
-        android:text="@string/phonenumber"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:textColorLink="@color/black"
-        android:textStyle="bold"
+        android:background="@color/udacityblue"
         android:fontFamily="gothic"
         android:padding="2dp"
-        android:layout_above="@id/web"  />
+        android:text="@string/phonenumber"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorLink="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 </RelativeLayout>
